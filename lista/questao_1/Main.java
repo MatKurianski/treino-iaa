@@ -1,7 +1,7 @@
 public class Main {
   public static void main(String args[]) {
     Combinatoria c = new Combinatoria("MAK");
-    c.arranjarEImprimir(3);
+    c.arranjarEImprimir();
   } 
 }
 
@@ -14,11 +14,15 @@ class Combinatoria implements ICombinatoria {
     this.palavra = palavra;
   }
 
-  Combinatoria(String palavra) { // Sobrecarga opcional.
+  Combinatoria(String palavra) { // Sobrecarga opcional #1.
     this.palavra = palavra.toCharArray();
   }
 
   private char[] palavra;
+
+  public void arranjarEImprimir() { // Sobrecarga opcional #2.
+    arranjarEImprimirAux(this.palavra.length, "");
+  }
 
   public void arranjarEImprimir(int contador) {
     arranjarEImprimirAux(contador, "");
