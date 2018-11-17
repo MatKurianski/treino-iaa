@@ -25,7 +25,8 @@ class Combinatoria implements ICombinatoria {
   }
 
   public void arranjarEImprimir(int contador) {
-    arranjarEImprimirAux(contador, "");
+    if(contador > 0) arranjarEImprimirAux(contador, "");
+    else throw new IllegalArgumentException("O parametro passado nao eh um numero positivo.");
   } 
 
   private void arranjarEImprimirAux(int contador, String aux) {
