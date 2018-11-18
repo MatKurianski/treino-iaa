@@ -23,7 +23,12 @@ public class Main {
       new Barreira(6, 5)
     );
     
+    /*
+      Escolher um ou outro abaixo!
+    */
+
     GPSGuloso.encontrarCaminho(m, partida, chegada);
+    // GPS.encontrarCaminho(m, partida);
     
     m.imprimirMapa();
   }

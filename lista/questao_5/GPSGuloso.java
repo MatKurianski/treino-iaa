@@ -5,7 +5,7 @@ class GPSGuloso {
     visitaGuloso(objetoMapa.Mapa, linha, coluna, "", chegada);
   }
 
-  public static boolean visitaGuloso(char[][] mapa, int lin, int col, String ultimoMovimento, Ponto chegada) {
+  private static boolean visitaGuloso(char[][] mapa, int lin, int col, String ultimoMovimento, Ponto chegada) {
     char posicao;
     
     try {
