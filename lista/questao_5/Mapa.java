@@ -20,7 +20,7 @@ class Mapa {
     int contadorC = 1;
 
     System.out.print(" ");
-    for(char[] vetor : this.Mapa) {
+    for(int i = 0; i < this.Mapa.length; i++) {
       System.out.print(" "+contadorC);
       contadorC++;
     }
