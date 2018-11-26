@@ -5,72 +5,54 @@
 */
 
 class No {
-
 	private int valor;
 	private No proximo;
 
-	public No(int valor){
-
+	public No(int valor) {
 		this.valor = valor;
 		this.proximo = null;
 	}
 
-	public void setProximo(No no){ 
-	
+	public void setProximo(No no) { 
 		proximo = no; 
 	}
   
-	public No getProximo(){ 
-
+	public No getProximo() { 
 		return proximo; 
 	}
 
-	public int getValor(){ 
-
+	public int getValor() { 
 		return valor; 
 	}
 }
 
 public class ListaLigada {
-
-	private No primeiro;
-
-	public ListaLigada(){ 
-
+  private No primeiro;
+  
+	public ListaLigada() {
 		primeiro = null;
+  }
+  
+  public void adiciona(int valor) {
+    No novo = new No(valor);
+    if(primeiro == null) {
+      primeiro = novo;
+    } else {
+      No ultimo = primeiro;
+      while(ultimo.getProximo() != null) {
+        ultimo = ultimo.getProximo();
+      }
+      ultimo.setProximo(novo);
+    }
 	}
 
-  	public void adiciona(int valor){
-
-    		No novo = new No(valor);
-
-		if(primeiro == null) {
-
-			primeiro = novo;
-		}
-		else {
-
-			No ultimo = primeiro;
-		
-			while(ultimo.getProximo() != null) {
-
-				ultimo = ultimo.getProximo();
-			}
-
-	    		ultimo.setProximo(novo);
-		}
-	}
-
-	public int get(int indice){
-		
+	public int get(int indice) {
 		int i;
 		No no;
 		
-		for(no = primeiro, i = 0; no != null; no = no.getProximo(), i++){
-
-			if(i == indice) return no.getValor();
-		}
-
+		for(no = primeiro, i = 0; no != null; no = no.getProximo(), i++) {
+      if(i == indice) return no.getValor();
+    }
 		throw new IllegalArgumentException("Indice inválido: " + indice);
   }
 
