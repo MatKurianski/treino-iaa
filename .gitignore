@@ -28,6 +28,9 @@
 hs_err_pid*
 
 # Outros (Adicionado por: Matheus Kurianski)
+/lista2/questao_9
+/code
 run.bat
+*.pdf
 
 # End of https://www.gitignore.io/api/java
