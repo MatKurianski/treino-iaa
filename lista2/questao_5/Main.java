@@ -27,8 +27,7 @@ public class Main {
       Escolher um ou outro abaixo!
     */
 
-    GPSGuloso.encontrarCaminho(m, partida, chegada);
-    // GPS.encontrarCaminho(m, partida);
+    GPS.encontrarCaminho(m, partida);
     
     m.imprimirMapa();
   }
